@@ -1,0 +1,21 @@
+{
+  "name": "testes-unitarios",
+  "version": "1.0.0",
+  "description": "Projeto Jest",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "jest"
+  ],
+  "author": "LeticiaFranco",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "jest-html-reporter": "^3.7.1"
+  }
+}
