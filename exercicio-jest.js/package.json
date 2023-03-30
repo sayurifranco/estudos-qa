@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "name": "exercicio-jest",
+  "version": "1.0.0",
+  "main": "index.js",
+ 
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Letícia Franco",
+  "license": "ISC",
+  "description": ""
+}
