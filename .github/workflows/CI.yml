@@ -1,0 +1,42 @@
+name:  Nosso fluxo de CI
+
+on:
+    
+  workflow_dispatch:
+
+jobs:
+        
+  deploy-dev:
+    name: DEV
+    runs-on: ubuntu-latest
+    steps:
+        - run: echo CONSTROI PROJETO INICIAL E REALIZA UNIT TESTS
+      
+  deploy-qa:
+    name: QA
+    needs: [deploy-dev]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo APLICA INTEGRATION AND SYSTEM TEST
+      
+  deploy-staging:
+    name: STAGE
+    needs: [deploy-qa]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo TESTES DE ACEITACAO E DOCUMENTACAO 
+        
+  deploy-production:
+    name: PRODUCAO
+    needs: [deploy-staging]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo DEPLOY/LANCAMENTO DA VERSAO/RELEASE DO PROJETO
+      
+      - name: Merge qa -> compiled-main
+        uses: tukasz/direct-merge-action@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          
+          source-branch: qa
+          target-branch: main
+          commit-message: "Automatic Merge"
