@@ -3,7 +3,7 @@ name:  CI com trigger por update
 on:
 
  # schedule:
- # - cron: '0 */6 * * 5'  # https://crontab.guru/ #
+ # - cron: '0 */6 * * 5'  # https://crontab.guru/ # // execute at minute 0 past every th hour on Friday
   
   push:                   # EXECUÇÃO A CADA PUSH NA BRANCH MAIN
     branches:
