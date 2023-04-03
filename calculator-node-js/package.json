@@ -1,0 +1,21 @@
+{
+  "name": "calculator-node",
+  "version": "1.0.0",
+  "description": "Calculator app using NodeJS",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcosvfranco/calculator-node-js.git"
+  },
+  "author": "Marcos Franco @marcosvfranco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcosvfranco/calculator-node-js/issues"
+  },
+  "homepage": "https://github.com/marcosvfranco/calculator-node-js#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
