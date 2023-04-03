@@ -1,0 +1,16 @@
+name: Jest Tests
+
+on: [push]
+jobs:
+  jest-run:
+    runs-on: ubuntu-latest
+    name: Run all tests
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install Jest
+        run: npm i
+      - name: Run your tests
+        run: npm test
